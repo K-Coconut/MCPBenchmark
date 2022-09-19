@@ -3,20 +3,36 @@
 A tool to estimate the influence spread of solution sets.
 
 ## Acknowledge
-Adapted from [IMM](https://sourceforge.net/projects/im-imm/).
+
+The code is adapted from [IMM](https://sourceforge.net/projects/im-imm/).  
+More about Reverse Influence Sampling
+techniques:  [Maximizing Social Influence in Nearly Optimal Time](https://doi.org/10.1137/1.9781611973402.70)
+
+## Theoretical Support
+
+First, we run Monte Carlo simulation to generate a set of $RR$ sets $\mathcal{R}$, $\mathcal{R} = \{R_1,R_2,...,R_N\}$.
+For a set of vertices $S$, the degree of $S$ in $\mathcal{R}$ is denoted by $D(S)$, which is the number of $RR$ sets
+containing at least one vertex in $S$. According to the linearity of expectation, $\frac{nD(S)}{N}$ is an unbiased
+estimator of $I(S)$ [[1](https://doi.org/10.1137/1.9781611973402.70)]. Thus, in the polling method, $\frac{nD(S)}{N}$ is used to
+approximate $I(S)$. 
 
 ## Compile
+
 ```sh
 make clean && make
 ```
 
 ## Execute
-We integrated the tool in Python scripts under each sub-project, execute these scripts to calculate the influence spread.  
+
+We integrated the tool in Python scripts under each sub-project, execute these scripts to calculate the influence
+spread.
+
 ```sh
 python influence_estimation.py -d $dataset ..
 ```
 
 You can also execute the binary file directly.
+
 ```shell
  # -size: Required. Number of RR sets to generate, the larger the more accurate. 1e5 is adequate to most cases.
  # -seedFile: Required, the path of the file containing solution set 

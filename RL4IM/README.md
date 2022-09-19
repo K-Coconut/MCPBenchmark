@@ -35,6 +35,10 @@ example:
 python test_real_graph.py -d BrightKite --weight_model CONST
 ```
 2. Influence Estimation
+```sh
+python influence_estimation.py -d BrightKite --weight_model CONST
+```
+
 
 ### Test on Synthetic Graph
 1. Generate Synthetic Graphs
@@ -50,7 +54,7 @@ python test_synthetic.py
 
 3. Influence Estimation
 ```sh
-python influence_estimation.py -d BrightKite --weight_model CONST
+python influence_estimation.py
 ```
 
 ## More Insights
