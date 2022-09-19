@@ -9,7 +9,8 @@ bash build.sh
 ```
 
 # Train
-**NOTE**: We can train the model with different combinations of datasets. Please annotate or unannotate the code in train.py to train the model in different ways, and specify the model_prefix.
+**NOTE**: We can train the model with different combinations of datasets, more details can be found at the [paper](https://arxiv.org/abs/1907.11625). Please annotate or unannotate the code in train.py to train the model in different ways, and specify the model_prefix.
+Download the training datasets from [HERE](https://drive.google.com/drive/folders/1zug-letiQonVDsovvFIuWH3oXkmkaFlM?usp=sharing) and then put them under the directory *train_data*. 
 
 ```sh
 # params: please refer to the code.
@@ -18,7 +19,7 @@ bash build.sh
 python train.py --model_prefix 2_trainset_
 ```
 
-Our trained models can be downloaded from [HERE](https://drive.google.com/file/d/1Ct5QBHXY2MH2Zw7WGX-ZW-exoSGmCmFq/view?usp=sharing).
+Our trained models can be downloaded from [HERE](https://drive.google.com/drive/folders/1jjGMXP6PcMu68cP_N9yQo-zRtWLy-ArE?usp=sharing). Put the files under the directory *models*.
 
 # Test
 ```sh
@@ -30,7 +31,7 @@ Our trained models can be downloaded from [HERE](https://drive.google.com/file/d
 # other params please refer to the codes
 
 Quick start example:
-python test.py -d BrightKite -k 20 --weight_model CONST --model_prefix 2_trainset_
+python test.py -d BrightKite -k 20 --weight_model CONST --model_prefix 1_trainset_
 ```
 
 ## Influence Spread
