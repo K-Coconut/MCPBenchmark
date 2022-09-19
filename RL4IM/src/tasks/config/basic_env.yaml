@@ -1,0 +1,31 @@
+#-----------------------------------environment args-----------------------------------
+mode: 'train' # str, {'train', 'test'}
+graph_type: 'powerlaw'  # 'erdos_renyi', 'powerlaw' metavar='GRAPH', default='erdos_renyi', help ='Type of graph to optimize')
+graph_nbr_train: 200 # , type=int, default='1', help='number of differente graph to generate for the training sample')
+graph_nbr_test: 5 # , type=int, default='1', help='number of differente graph to generate for the test sample')
+node_train: 200 # "number of node in generated train graphs", 100+ 50, 100
+node_test: 200 # "number of node in generated test graphs", 100+ 50, 100
+graph_node_var: 20
+T: 50  # time horizon #note that this definition is slightly different from the paper
+budget: 50  # budget at each main step
+q: 1  # probability of invited node being present
+
+#paras for graphs
+p: 0.05  #"parameter in graph degree distribution for erdos_renyi graphs; probability of forming tri-angle in power-law graphs")
+m: 3  #help="m, parameter in graph degree distribution for power-law graphs")
+
+# for cascade models
+cascade: 'IC'  # cascade model
+propagate_p: 0.1  # influence propagation probability for IC cascade
+l: 0.05  # influence of each neighbor in LT cascade
+d: 1  # d in SC cascade
+
+# paras for baselines
+greedy_sample_size: 50  # sample size for value estimation of greedy algorithms
+is_real_graph: False
+
+real_graph_name: "dblp"
+sample_nodes_ratio: 1
+
+# output
+results_dir: models # path to save models 

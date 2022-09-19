@@ -1,0 +1,2 @@
+echo python -m graphsage.supervisedPredict --train_prefix $1 --num_k $2 --model graphsage_meanpool --neighborhood_sampling $3 --bud_mul_fac $4 --epoch_to_predict $5 --sigmoid -trained_model $6
+python -m graphsage.supervisedPredict --train_prefix $1 --num_k $2 --model graphsage_meanpool --neighborhood_sampling $3 --bud_mul_fac $4 --epoch_to_predict $5 --sigmoid -trained_model $6 --weight_model $7

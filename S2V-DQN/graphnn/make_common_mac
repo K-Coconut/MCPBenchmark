@@ -1,0 +1,26 @@
+dir_guard = @mkdir -p $(@D)
+
+INTEL_ROOT := /opt/intel
+MKL_ROOT = $(INTEL_ROOT)/oneapi/mkl/2021.4.0
+TBB_ROOT = $(INTEL_ROOT)/oneapi/tbb/2021.4.0
+USE_GPU = 0
+
+FIND := find
+CXX := g++
+CXXFLAGS += -Wall -O3 -std=c++11
+LDFLAGS += -lm
+LDFLAGS += -L$(MKL_ROOT)/lib -lmkl_rt
+LDFLAGS += -L$(TBB_ROOT)/lib -ltbb
+LDFLAGS += -L$(INTEL_ROOT)/oneapi/compiler/2021.4.0/mac/compiler/lib -liomp5
+LDFLAGS += -Wl,-rpath $(MKL_ROOT)/lib -Wl,-rpath $(TBB_ROOT)/lib -Wl,-rpath $(INTEL_ROOT)/oneapi/compiler/2021.4.0/mac/compiler/lib
+ifeq ($(USE_GPU), 1)
+    CUDA_HOME := /usr/local/cuda-8.0
+    NVCC := $(CUDA_HOME)/bin/nvcc
+    NVCCFLAGS += --default-stream per-thread
+    LDFLAGS += -L$(CUDA_HOME)/lib64 -lcudart -lcublas -lcurand -lcusparse
+endif
+
+CUDA_ARCH :=    -gencode arch=compute_30,code=sm_30 \
+		-gencode arch=compute_35,code=sm_35 \
+		-gencode arch=compute_50,code=sm_50 \
+		-gencode arch=compute_50,code=compute_50

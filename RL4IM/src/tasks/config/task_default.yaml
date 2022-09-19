@@ -1,0 +1,3 @@
+use_tensorboard: False
+use_cuda: True
+gpu_id: 0

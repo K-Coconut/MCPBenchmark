@@ -1,0 +1,77 @@
+# editor
+*.idea
+*/.vscode
+
+#python
+*__pycache__
+*.pyc
+
+# log files
+log/
+
+# output
+*.pkl
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# debug
+*.dSYM
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+IMDiscount/discount
+IMEvaluation/evaluate
+IMM/imm_continuous
+IMM/imm_discrete
+
+# trained model
+*trained_model_MC*
+*supervisedTrainedModel*
+*.tar.gz
+*.tar
+RL4IM/models
+Geometric-QN/models
+
+# data and result
+results
+result
+
+data
+amazon
+BrightKite
+dblp
+youtube
+orkut
+live_journal
+wiki_topcats
+wiki_talk
+gowalla
+pokec

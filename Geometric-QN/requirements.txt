@@ -1,0 +1,16 @@
+scipy==1.5.2
+matplotlib==3.5.1
+numpy==1.19.2
+pandas==1.3.4
+gensim==3.8.3
+community==1.0.0b1
+numba==0.54.1
+torch==1.7.1
+tensorflow==2.4.1
+tqdm==4.62.3
+networkx==2.8
+joblib==1.1.0
+cvxpy==1.2.1
+fastdtw==0.3.4
+Pillow==9.2.0
+scikit_learn==1.1.2

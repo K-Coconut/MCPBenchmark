@@ -1,0 +1,26 @@
+dir_guard = @mkdir -p $(@D)
+
+INTEL_ROOT := /cm/shared/common_software_stack/apps/programming/compilers/intel/2020u4/compilers_and_libraries/linux
+MKL_ROOT = $(INTEL_ROOT)//mkl
+TBB_ROOT = $(INTEL_ROOT)/tbb/
+COMPILER_ROOT = $((INTEL_ROOT))/
+USE_GPU = 0
+
+FIND := find
+CXX := g++
+CXXFLAGS += -Wall -O3 -std=c++11 -fPIC
+LDFLAGS += -lm
+LDFLAGS += -L$(MKL_ROOT)/lib/intel64/ -lmkl_rt
+LDFLAGS += -L$(TBB_ROOT)/lib/intel64/gcc4.8/ -ltbb
+LDFLAGS += -L$(INTEL_ROOT)/oneapi/compiler/2021.4.0/linux/compiler/lib/intel64/ -liomp5
+LDFLAGS += -Wl,-rpath $(MKL_ROOT)/lib/intel64/ -Wl,-rpath $(TBB_ROOT)/lib/intel64/
+ifeq ($(USE_GPU), 1)
+    CUDA_HOME := /cm/shared/common_software_stack/apps/programming/compilers/cuda/10.1.243/
+    NVCC := $(CUDA_HOME)/bin/nvcc
+    NVCCFLAGS += --default-stream per-thread
+    LDFLAGS += -L$(CUDA_HOME)/lib -lcudart -lcublas -lcurand -lcusparse
+endif
+
+CUDA_ARCH :=    -gencode arch=compute_35,code=sm_35 \
+                -gencode arch=compute_50,code=sm_50 \
+                -gencode arch=compute_50,code=compute_50
