@@ -1,5 +1,10 @@
 mkdir -p data
 
+wget --no-check-certificate https://snap.stanford.edu/data/ca-CondMat.txt.gz
+mkdir data/CondMat
+gunzip ca-CondMat.txt.gz
+mv ca-CondMat.txt data/CondMat/edges.txt
+
 wget --no-check-certificate http://snap.stanford.edu/data/bigdata/communities/com-youtube.ungraph.txt.gz
 mkdir data/youtube
 gunzip com-youtube.ungraph.txt.gz
@@ -44,6 +49,12 @@ wget --no-check-certificate http://snap.stanford.edu/data/soc-pokec-relationship
 mkdir data/pokec
 gunzip soc-pokec-relationships.txt.gz
 mv soc-pokec-relationships.txt data/pokec/edges.txt
+
+wget --no-check-certificate https://snap.stanford.edu/data/as-skitter.txt.gz
+mkdir data/skitter
+gunzip as-skitter.txt.gz
+mv as-skitter.txt data/skitter/edges.txt
+
 
 wget --no-check-certificate https://snap.stanford.edu/data/bigdata/communities/com-orkut.ungraph.txt.gz
 mkdir data/orkut
