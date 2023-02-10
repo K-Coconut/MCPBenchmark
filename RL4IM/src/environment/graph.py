@@ -1,4 +1,5 @@
 import copy
+import random
 
 import numpy as np
 import networkx as nx
@@ -49,8 +50,7 @@ class Graph:
             self.g = g
 
         self.g = self.g.to_directed()
-        # Load in WC mode
-        self.__init_edge_weight()
+        self.__init_edge_weight(args.weight_model)
         self.orig_g = copy.deepcopy(self.g)
 
     @classmethod
@@ -108,10 +108,15 @@ class Graph:
     def __len__(self):
         return len(self.g)
 
-    def __init_edge_weight(self):
+    def __init_edge_weight(self, weight_model):
         for u in self.g.nodes():
             for v in self.g.neighbors(u):
-                self.g[u][v]['weight'] = 1 / self.g.in_degree(v)
+                if weight_model == "WC":
+                    self.g[u][v]['weight'] = 1 / self.g.in_degree(v)
+                if weight_model == "TV":
+                    self.g[u][v]['weight'] = random.choice([0.1, 0.01, 0.001])
+                if weight_model == "CONST":
+                    self.g[u][v]['weight'] = self.args.propagate_p
 
     def init_sub_graph(self):
         sampled_nodes = np.random.choice(list(self.orig_g.nodes()), size=self.size, replace=False)
