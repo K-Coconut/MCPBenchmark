@@ -41,6 +41,7 @@ os.makedirs("logs", exist_ok=True)
 
 def arg_parse():
     parser = argparse.ArgumentParser(description='Influence Maxima Arguments')
+    parser.add_argument('--weight_model', dest='weight_model', type=str, default='CONST')
     parser.add_argument('--logfile',dest='logfile', type=str,default='train.log',
                     help='Logging file')
     parser.add_argument('--logdir', dest='logdir', type=str, default=None,
@@ -236,7 +237,7 @@ for g_path in g_paths:
 #Get best baseline
 opts = []
 for gp,g in zip(g_paths,graphs):
-    opt_obj, local_obj, S_opt = influence(g,g)
+    opt_obj, local_obj, S_opt = influence(g,g,args.weight_model)
     print(gp)
     print('OPT Results:',opt_obj, S_opt)
     logging.info('OPT Results:'+str(opt_obj)+' '+ str(S_opt))
