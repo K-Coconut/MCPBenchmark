@@ -47,7 +47,7 @@ while True:
     G.add_edge(node_dic[source], node_dic[target])
     if weight_model == 'LND':
         weight = float(edge[2].rstrip('\x00'))
-        G[source][target]['weight'] = weight
+        G[node_dic[source]][node_dic[target]]['weight'] = weight
 
 for edge in G.edges():
     u, v = edge[0], edge[1]
