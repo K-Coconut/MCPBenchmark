@@ -55,4 +55,14 @@ mkdir data/live_journal
 gunzip com-lj.ungraph.txt.gz
 mv com-lj.ungraph.txt data/live_journal/edges.txt
 
+wget --no-check-certificate  https://snap.stanford.edu/data/ca-CondMat.txt.gz
+mkdir data/condmat
+gunzip ca-CondMat.txt.gz
+mv ca-CondMat.txt data/condmat/edges.txt
+
+wget --no-check-certificate https://snap.stanford.edu/data/as-skitter.txt.gz
+mkdir data/skitter
+gunzip as-skitter.txt.gz
+mv as-skitter.txt data/skitter/edges.txt
+
 # LND dataset can be downloaded from https://drive.google.com/drive/folders/1jORG__SLxQIVk_DzZOgiUobzJDmKNJVp?usp=sharing
