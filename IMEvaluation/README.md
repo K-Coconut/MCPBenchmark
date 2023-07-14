@@ -42,9 +42,9 @@ You can also execute the binary file directly.
  # -seed_random: Option, random seed
  
 example:
-./evaluate -seedFile ./result/seed10.txt -outputFile ./result/coverageq0.txt  -graphFile ../data/BrightKite/IM/WC/edges.txt -size 1000000
+./evaluate -seedFile ./result/seed10.txt -output ./result/coverageq0.txt  -graphFile ../data/BrightKite/IM/WC/edges.txt -size 1000000
 
 # use the klist param to calculate coverage of all the seed files under the directory.
-./evaluate -seedFile ./result/seed%d.txt -outputFile ./result/coverage%d.txt  -graphFile ../data/BrightKite/IM/WC/edges.txt -klist 20,50,100,150,200, -size 1000000  
+./evaluate -seedFile ./result/seed%d.txt -output ./result/coverage%d.txt  -graphFile ../data/BrightKite/IM/WC/edges.txt -klist 20,50,100,150,200, -size 1000000  
 ```
 
