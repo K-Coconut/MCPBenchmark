@@ -63,6 +63,7 @@ Geometric-QN/models
 # data and result
 results
 result
+*.pdf
 
 data
 amazon
