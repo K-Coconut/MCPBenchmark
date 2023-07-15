@@ -1,6 +1,6 @@
 # conda create environment
-conda create -n gcomb python=3.6
-conda activate gcomb
+conda create -name lense
+conda activate lense
 
 # download requirements
 pip install -r requirements.txt
