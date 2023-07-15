@@ -1,3 +1,3 @@
 #base_dir=/home/zhicliang3/git/base/GCOMB-Research/IM/IM_TV/GraphSAGE-master/real_data/
-base_dir=/Users/coconut/code/git/IM/GCOMB-Research/IM/IM_TV/GraphSAGE-master/real_data/
-rl4im_dir=/Users/coconut/code/git/IM/RL4IM-Contingency/data/
+base_dir=/Users/$USER/code/git/IM/GCOMB-Research/IM/IM_TV/GraphSAGE-master/real_data/
+rl4im_dir=/Users/$USER/code/git/IM/RL4IM-Contingency/data/
