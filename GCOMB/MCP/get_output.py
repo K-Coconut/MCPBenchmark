@@ -9,11 +9,14 @@ import os
 import util_output
 from random import shuffle
 import time
+import tracemalloc
+
 import evaluate
 from sklearn.preprocessing import StandardScaler
 tf.logging.set_verbosity(tf.logging.ERROR)
 from pathlib import Path
 from tensorflow.contrib import predictor
+
 
 # neural network parameters
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -22,6 +25,9 @@ np.set_printoptions(threshold=np.inf)
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = str(0)
+
+tracemalloc.start()
+
 def init(dimension1):
 	global dimension
 	dimension = dimension1
@@ -331,3 +337,10 @@ file_handle2 = open(graph_dir + "-reward_RL{}_nbs{}".format(num_k, nbs),"w")
 file_handle2.write(str(reward)+"\n" + "time :"+str(elapsed_time))
 file_handle2.close()
 print(" reward@{}k@nbs{} = ".format(num_k,nbs), reward)
+
+current, peak = tracemalloc.get_traced_memory()
+print("Current memory usage is %.3f MB; Peak was %.3f MB" % (current / 10 ** 6, peak / 10 ** 6))
+f = open(os.path.join(graph_dir, "memory_rl_budget_%d.txt" % num_k), 'w')
+f.write("%.3f" % (peak / 10 ** 6))
+tracemalloc.stop()
+tracemalloc.clear_traces()

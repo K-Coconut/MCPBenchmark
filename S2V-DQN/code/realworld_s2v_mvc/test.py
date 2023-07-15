@@ -2,6 +2,7 @@ import os
 import sys
 from pathlib import Path
 import time
+import tracemalloc
 
 sys.path.append('%s/mvc_lib' % os.path.dirname(os.path.realpath(__file__)))
 from mvc_lib import MvcLib
@@ -34,6 +35,7 @@ def find_model_file(opt):
 if __name__ == '__main__':
     print(" ".join(sys.argv[1:]))
     api = MvcLib(sys.argv)
+    tracemalloc.start()
 
     opt = {}
     for i in range(1, len(sys.argv), 2):
@@ -66,3 +68,10 @@ if __name__ == '__main__':
         f_out.close()
         process_bar.set_postfix(budget=budget, coverage=coverage)
         process_bar.update()
+    
+        current, peak = tracemalloc.get_traced_memory()
+        print("Current memory usage is %.3f MB; Peak was %.3f MB" % (current / 10 ** 6, peak / 10 ** 6))
+        f = open(os.path.join(output_dir, "memory_rl_budget_%d.txt" % budget), 'w')
+        f.write("%.3f" % (peak / 10 ** 6))
+    tracemalloc.stop()
+    tracemalloc.clear_traces()
