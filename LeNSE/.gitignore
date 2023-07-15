@@ -1,0 +1,17 @@
+# vscode
+.vscode
+
+# python
+__pycache__
+
+# data
+data
+results
+
+# log
+log
+*.pdf
+
+# tools
+IM/IMEvaluation
+IM/IMM
