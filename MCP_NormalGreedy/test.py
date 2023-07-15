@@ -2,6 +2,7 @@ import argparse
 import os
 import sys
 import time
+import tracemalloc
 
 from alg import greedy
 
@@ -18,9 +19,10 @@ if __name__ == '__main__':
     output_path = f"result/{dataset}"
     os.makedirs(output_path, exist_ok=True)
     inputFileName = os.path.join("..", "data", dataset, "edges.txt")
-    budgets = [20, 50, 100, 150, 200]
+    budgets = [20]
     main_graph = Graph()
     main_graph.read_edges(inputFileName)
+    tracemalloc.start()
 
     for k in budgets:
         result_file = os.path.join(output_path, f"budget{k}.txt")
@@ -35,3 +37,7 @@ if __name__ == '__main__':
         print("k: {}\treward: {}\ttime: {}".format(k, coverage, runtime))
         result_file = open(result_file, 'w')
         result_file.write(f"{coverage}\t{runtime}")
+        current, peak = tracemalloc.get_traced_memory()
+        print("Current memory usage is %.3f MB; Peak was %.3f MB" % (current / 10 ** 6, peak / 10 ** 6))
+        f = open(os.path.join(output_path, "memory_budget%d.txt" % k), 'w')
+        f.write("%.3f" % (peak / 10 ** 6))

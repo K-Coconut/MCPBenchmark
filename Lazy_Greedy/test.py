@@ -2,6 +2,7 @@ import time
 import os
 import sys
 import argparse
+import tracemalloc
 
 from alg import lazy_greedy
 
@@ -15,6 +16,7 @@ if __name__ == '__main__':
     parser.add_argument("-n", '--repeat_num', type=int, default=5)
     args = parser.parse_args()
     dataset = args.dataset
+    tracemalloc.start()
 
     output_path = f"result/{dataset}"
     os.makedirs(output_path, exist_ok=True)
@@ -37,3 +39,7 @@ if __name__ == '__main__':
         result_file = open(result_file, 'w')
         print("k: {}\treward: {}\ttime: {}".format(k, total_coverage / args.repeat_num, total_runtime / args.repeat_num))
         result_file.write(f"{total_coverage / args.repeat_num:.4f}\t{total_runtime / args.repeat_num:.4f}")
+        current, peak = tracemalloc.get_traced_memory()
+        print("Current memory usage is %.3f MB; Peak was %.3f MB" % (current / 10 ** 6, peak / 10 ** 6))
+        f = open(os.path.join(output_path, "memory_budget%d.txt" % k), 'w')
+        f.write("%.3f" % (peak / 10 ** 6))
