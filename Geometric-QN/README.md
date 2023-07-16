@@ -10,7 +10,7 @@ bash build.sh
 
 # Train
 **NOTE**: We can train the model with different combinations of datasets, more details can be found at the [paper](https://arxiv.org/abs/1907.11625). Please annotate or unannotate the code in train.py to train the model in different ways, and specify the model_prefix.
-Download the training datasets from [HERE](https://drive.google.com/drive/folders/1zug-letiQonVDsovvFIuWH3oXkmkaFlM?usp=sharing) and then put them under the directory *train_data*. 
+Download the training datasets from [HERE](https://drive.google.com/drive/folders/1kiWdgw04neMHuxejZeN9ihsxNaxTdkKu?usp=drive_link) and then put them under the directory *train_data*. 
 
 ```sh
 # params: please refer to the code.
@@ -19,7 +19,7 @@ Download the training datasets from [HERE](https://drive.google.com/drive/folder
 python train.py --model_prefix 2_trainset_
 ```
 
-Our trained models can be downloaded from [HERE](https://drive.google.com/drive/folders/1jjGMXP6PcMu68cP_N9yQo-zRtWLy-ArE?usp=sharing). Put the files under the directory *models*.
+Our trained models can be downloaded from [HERE](https://drive.google.com/drive/folders/1JIgcb1vIz-vQg9ixilgUYpkUShect0qH?usp=drive_link). Put the files under the directory *models*.
 
 # Test
 ```sh

@@ -76,4 +76,4 @@ mkdir data/skitter
 gunzip as-skitter.txt.gz
 mv as-skitter.txt data/skitter/edges.txt
 
-# LND dataset can be downloaded from https://drive.google.com/drive/folders/1jORG__SLxQIVk_DzZOgiUobzJDmKNJVp?usp=sharing
+# LND dataset can be downloaded from https://drive.google.com/drive/folders/1Cq3CF-1zMXyRBpO7IH1Yw_qxH3JQ77eQ?usp=drive_link

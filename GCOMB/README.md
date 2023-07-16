@@ -29,7 +29,7 @@ bash pre_process.sh $dataset $weight_model
 ```
 
 You can also skip the preprocess procedure by using the our noise interpolator directly.
-1. Download interpolators from [HERE](https://drive.google.com/drive/folders/16goEV7lpdt2bFaKouGJ1IOezmIuHOUUl?usp=sharing) and then put them under GraphSAGE-master directory.
+1. Download interpolators from [HERE](https://drive.google.com/drive/folders/1V0TcKcC5AW_CZUhKwN7wTHgAVbtX4pg1?usp=drive_link) and then put them under GraphSAGE-master directory.
 2. Execute script to generate test dataset.
     ```shell
     # MCP
@@ -50,7 +50,7 @@ bash train.sh
 cd IM
 bash train.sh $weight_model
 ```
-Our trained model can be downloaded from [HERE](https://drive.google.com/drive/folders/16goEV7lpdt2bFaKouGJ1IOezmIuHOUUl?usp=sharing).
+Our trained model can be downloaded from [HERE](https://drive.google.com/drive/folders/1V0TcKcC5AW_CZUhKwN7wTHgAVbtX4pg1?usp=drive_link).
 Put the RL model (trained_model_MC*) under ./IM or ./MCP, and the GCN model (*supervisedTrainedModel_MC_marginal) under GraphSAGE-master.
 
 

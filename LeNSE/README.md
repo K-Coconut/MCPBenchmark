@@ -53,7 +53,7 @@ bash train.sh
 cd IM
 bash train.sh $weight_model
 ```
-Our trained model can be downloaded from [HERE](https://drive.google.com/drive/folders/1uVUjsjpcbvtVEfH5kwGEFjTsHu9qCNiT?usp=sharing).
+Our trained model can be downloaded from [HERE](https://drive.google.com/drive/folders/1pOc6dj0oprQYq4wvu6BKMYvv4sqEXA3i?usp=drive_link).
 Put the model under ./IM/data/youtube/ or ./MVC/data/BrightKite/
 
 

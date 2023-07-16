@@ -74,7 +74,7 @@ cd code/realworld_s2v_mvc
 bash run_nstep_dqn.sh $dataset
 ```
 We provide trained models that trained on dataset memetracker or BrightKite.  
-Download from [HERE](https://drive.google.com/file/d/1uro-k4xRrWFShnCpxhcDUWlGCsaqFkkv/view?usp=sharing), and then put the files under code/realworld_s2v_mvc/results/. 
+Download from [HERE](https://drive.google.com/drive/folders/1zDWuxXuJwEg7OFsOBbVwvUz6uQFv1ixW?usp=drive_link), and then put the files under code/realworld_s2v_mvc/results/. 
 
 ## 4. Test
 Execute the command to test the model with default parameter setting:
