@@ -21,6 +21,8 @@ init_epsilon: 0.99
 final_epsilon: 0.01
 epsilon_decay_steps: 1000
 #
+# edge weight model
+weight_model: 'CONST' # ['CONST', 'TV', 'WC']
 #
 method: 'rl'  # ['rl', 'random', 'lazy_adaptive_greedy']
 #

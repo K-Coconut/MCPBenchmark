@@ -19,7 +19,7 @@ Please refer to source code to find more details about running project on Docker
 
 1. Default command line:
 ```bash
-python main.py --config=rl4im --env-config=basic_env --results-dir=results with lr=1e-3
+python main.py --config=rl4im --env-config=basic_env with lr=1e-3
 ```
 All the default environment and method-related parameters are specified in `src/tasks/config`. You can set customized values of hyperparameters after `with` as demonstrated in the above command.
 

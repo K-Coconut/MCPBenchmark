@@ -12,7 +12,7 @@ The table below lists the methods we include in the benchmark study.
 |[GCOMB][gcomb]| ML-based | MCP & IM | [Learning Heuristics over Large Graphs via Deep Reinforcement Learning](https://arxiv.org/abs/1903.03332)|
 |[RL4IM][rl4im]| ML-based | IM | [Contingency-Aware Influence Maximization: A Reinforcement Learning Approach](https://arxiv.org/abs/2106.07039)|
 |[Geometric-QN][gqn]| ML-based | IM | [Influence maximization in unknown social networks: Learning Policies for Effective Graph Sampling](https://arxiv.org/abs/1907.11625)|
-|[LeNSE][LeNSE]| ML-based | IM | [LeNSE: Learning To Navigate Subgraph Embeddings for Large-Scale Combinatorial Optimisation](https://arxiv.org/abs/2205.10106)|
+|[LeNSE][LeNSE]| ML-based | IM & MCP | [LeNSE: Learning To Navigate Subgraph Embeddings for Large-Scale Combinatorial Optimisation](https://arxiv.org/abs/2205.10106)|
 | Normal Greedy | Algorithmic | MCP | - |
 | Lazy Greedy | Algorithmic | MCP | - |
 | [IMM][imm] | Algorithmic | IM | [Influence Maximization in Near-Linear Time: A Martingale Approach](https://doi.org/10.1145/2723372.2723734) |
@@ -29,11 +29,9 @@ The table below lists the methods we include in the benchmark study.
 
 
 ## *Prologue*
-***NOTE***: The codes of all the methods except Lazy Greedy and IMDiscount are derived from the authors, we didn't fork the projects directly because we need to adapt the codes to solve MCP and IM problems, and remove unnecessary files. And thus, we upload a new version for simplicity. Readers can access to the source code from the links in the table above.
+***NOTE***: With the exception of Lazy Greedy and IMDiscount, we derived the codes of all the methods from the original authors. However, we did not directly fork the projects because we needed to adapt the codes to solve MCP and IM problems, and remove unnecessary files. Therefore, we uploaded a new version for simplicity. Readers can access the source code through the links provided in the table above.
 
-Since not all methods are specific-tailored, we need to adapt the method to solve our problems. For example, S2V-DQN is originally designed to solve Minimum Vertex Cover (MVC), Maximum Cut (MC), Traveling Salesman Problem (TSP), and RL4IM is designed to solve the contigency-aware IM problem. But these methods can be easily adapted to MCP or IM.
-With the principle of making as few changes to the code as possible, we try to play the best of these methods and reproduce the results of these works.
-Please refer to the subdirectory of each project and source code to check the difference.
+Since not all methods were specifically tailored for our purposes, we had to make adaptations to solve our specific problems. For instance, S2V-DQN was originally designed for solving Minimum Vertex Cover (MVC), Maximum Cut (MC), and Traveling Salesman Problem (TSP), while RL4IM was designed for addressing the contingency-aware IM problem. Nevertheless, we were able to easily adapt these methods to solve MCP or IM problems. Our aim was to make minimal changes to the code while maximizing the performance of these methods and reproducing the results. Please refer to the subdirectory of each project and examine the source code to identify any differences.
 
 # Start Up
 ### Prerequisites
@@ -64,7 +62,7 @@ Follow instructions in README under RL4IM and Geometric-QN to generate synthetic
 cd data
 python preprocess.py -d BrightKite -m WC
 ```
-2. Methods like GCOMB need a long pipeline of preprocessing before training and test, please execute preprocessing script under the subdirectory.
+2. Methods like GCOMB, LeNSE need a long pipeline of preprocessing before training and test, please execute preprocessing script under the subdirectory.
 
 ## 2. Training & Test
 * Follow instructions in each project to train models and test.
