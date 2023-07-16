@@ -1,7 +1,7 @@
 # Benchmark Study for MCP
 Implementation for the following paper: "A Worrying Analysis of Deep-RL Methods for Maximum Coverage over Graphs: A Benchmark Study"
 
-**Our FUll-VERSION paper can be found at** [HERE](full_version_MCPBenchmarks.pdf)
+<u>**Our FUll-VERSION paper can be found at** [HERE](full_version_MCPBenchmarks.pdf)</u>
 
 The table below lists the methods we include in the benchmark study.
 
