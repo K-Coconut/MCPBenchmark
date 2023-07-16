@@ -12,7 +12,7 @@ The table below lists the methods we include in the benchmark study.
 |[GCOMB][gcomb]| ML-based | MCP & IM | [Learning Heuristics over Large Graphs via Deep Reinforcement Learning](https://arxiv.org/abs/1903.03332)|
 |[RL4IM][rl4im]| ML-based | IM | [Contingency-Aware Influence Maximization: A Reinforcement Learning Approach](https://arxiv.org/abs/2106.07039)|
 |[Geometric-QN][gqn]| ML-based | IM | [Influence maximization in unknown social networks: Learning Policies for Effective Graph Sampling](https://arxiv.org/abs/1907.11625)|
-|[LeNSE][LeNSE]| ML-based | IM & MCP | [LeNSE: Learning To Navigate Subgraph Embeddings for Large-Scale Combinatorial Optimisation](https://arxiv.org/abs/2205.10106)|
+|[LeNSE][LeNSE]| ML-based | MCP & IM | [LeNSE: Learning To Navigate Subgraph Embeddings for Large-Scale Combinatorial Optimisation](https://arxiv.org/abs/2205.10106)|
 | Normal Greedy | Algorithmic | MCP | - |
 | Lazy Greedy | Algorithmic | MCP | [Cost-effective outbreak detection in networks](https://www.cs.cmu.edu/~jure/pubs/detect-kdd07.pdf) |
 | [IMM][imm] | Algorithmic | IM | [Influence Maximization in Near-Linear Time: A Martingale Approach](https://doi.org/10.1145/2723372.2723734) |
