@@ -14,7 +14,7 @@ The table below lists the methods we include in the benchmark study.
 |[Geometric-QN][gqn]| ML-based | IM | [Influence maximization in unknown social networks: Learning Policies for Effective Graph Sampling](https://arxiv.org/abs/1907.11625)|
 |[LeNSE][LeNSE]| ML-based | IM & MCP | [LeNSE: Learning To Navigate Subgraph Embeddings for Large-Scale Combinatorial Optimisation](https://arxiv.org/abs/2205.10106)|
 | Normal Greedy | Algorithmic | MCP | - |
-| Lazy Greedy | Algorithmic | MCP | - |
+| Lazy Greedy | Algorithmic | MCP | [Cost-effective outbreak detection in networks](https://www.cs.cmu.edu/~jure/pubs/detect-kdd07.pdf) |
 | [IMM][imm] | Algorithmic | IM | [Influence Maximization in Near-Linear Time: A Martingale Approach](https://doi.org/10.1145/2723372.2723734) |
 | [OPIM][opim] | Algorithmic | IM |[Online Processing Algorithms for Influence Maximization](https://dl.acm.org/doi/pdf/10.1145/3183713.3183749)|
 | DegreeDiscount & SingleDiscount | Algorithmic | IM | [Efficient influence maximization in social networks](https://dl.acm.org/doi/10.1145/1557019.1557047)|
