@@ -29,9 +29,9 @@ The table below lists the methods we include in the benchmark study.
 
 
 ## *Prologue*
-***NOTE***: With the exception of Lazy Greedy and IMDiscount, we derived the codes of all the methods from the original authors. However, we did not directly fork the projects because we needed to adapt the codes to solve MCP and IM problems, and remove unnecessary files. Therefore, we uploaded a new version for simplicity. Readers can access the source code through the links provided in the table above.
+***NOTE***: Except for Lazy Greedy and IMDiscount, we sourced the code for all other methods from the original authors. We didn't directly fork the projects as we needed to modify the code to address MCP and IM issues, and also to remove extraneous files. Therefore, we uploaded a new version for simplicity. Readers can access the source code through the links provided in the table above.
 
-Since not all methods were specifically tailored for our purposes, we had to make adaptations to solve our specific problems. For instance, S2V-DQN was originally designed for solving Minimum Vertex Cover (MVC), Maximum Cut (MC), and Traveling Salesman Problem (TSP), while RL4IM was designed for addressing the contingency-aware IM problem. Nevertheless, we were able to easily adapt these methods to solve MCP or IM problems. Our aim was to make minimal changes to the code while maximizing the performance of these methods and reproducing the results. Please refer to the subdirectory of each project and examine the source code to identify any differences.
+Given that the original methods were not explicitly designed for our use-cases, we had to adapt them. For example, S2V-DQN was initially aimed at solving problems like MVC, MC, and TSP, whereas RL4IM targeted the contingency-aware IM issue. We minimally modified these codes to suit MCP or IM problems, aiming for minimal alteration while maximizing performance and replicability. For any code differences, please consult the specific subdirectory of each project.
 
 # Start Up
 ### Prerequisites
