@@ -9,6 +9,7 @@ class Graph(object):
         self.m = 0
         self.nodes = defaultdict(set)
         self.nodes_degree = {}
+        self.edges = []
 
     def __len__(self):
         return self.n
@@ -55,6 +56,7 @@ class Graph(object):
 
             self.nodes[id_map[source]].add(id_map[target])
             self.nodes[id_map[target]].add(id_map[source])
+            self.edges.append((id_map[source], id_map[target]))
 
         self.n = len(self.nodes)
         self.m = m
