@@ -1,6 +1,6 @@
 # editor
 *.idea
-*/.vscode
+*.vscode
 
 #python
 *__pycache__
@@ -8,6 +8,7 @@
 
 # log files
 log/
+*.log
 
 # output
 *.pkl
@@ -59,6 +60,7 @@ IMM/imm_discrete
 *.tar
 RL4IM/models
 Geometric-QN/models
+Geometric-QN/runs
 
 # data and result
 results
