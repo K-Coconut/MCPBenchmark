@@ -1,7 +1,7 @@
 # Benchmark Study for MCP
 ## **Our FUll-VERSION paper can be found at** [HERE](full_version_MCPBenchmarks.pdf)
 
-Implementation for the following paper: "A Worrying Analysis of Deep-RL Methods for Maximum Coverage over Graphs: A Benchmark Study"
+Implementation for the following paper: "A Benchmark Study of Deep-RL Methods for Maximum Coverage over Graphs"
 
 The table below lists the methods we include in the benchmark study.
 
@@ -29,9 +29,9 @@ The table below lists the methods we include in the benchmark study.
 
 
 ## *Prologue*
-***NOTE***: Except for Lazy Greedy and IMDiscount, we sourced the code for all other methods from the original authors. We didn't directly fork the projects as we needed to modify the code to address MCP and IM issues, and also to remove extraneous files. Therefore, we uploaded a new version for simplicity. Readers can access the source code through the links provided in the table above.
+***NOTE***: Except for Lazy Greedy and IMDiscount, we sourced the code for all other methods from the original authors. We didn't directly fork the projects as we needed to modify the code to address MCP and IM problems, and also to remove extraneous files. Therefore, we uploaded a new version for simplicity. Readers can access the source code through the links provided in the table above.
 
-Given that the original methods were not explicitly designed for our use-cases, we had to adapt them. For example, S2V-DQN was initially aimed at solving problems like MVC, MC, and TSP, whereas RL4IM targeted the contingency-aware IM issue. We minimally modified these codes to suit MCP or IM problems, aiming for minimal alteration while maximizing performance and replicability. For any code differences, please consult the specific subdirectory of each project.
+Given that the original methods were not explicitly designed for our use-cases, we had to adapt them. For example, S2V-DQN was initially aimed at solving problems like MVC, MC, and TSP, whereas RL4IM targeted the contingency-aware IM issue. We minimally modified these codes to suit MCP or IM problems, aiming for minimal alteration while maximizing performance and replicability. For any code differences, please refer to the specific subdirectory of each project.
 
 # Start Up
 ### Prerequisites
@@ -40,19 +40,19 @@ The experiments are tested under these systems:
 * Ubuntu 18.04.6 LTS, gcc version 7.5.0
 
 ### Build
-We recommend that creating a new Anaconda environment for each python-based project, and download all the requirements with conda. Also, some projects provide a Docker file to build up a container to execute the programs.
-Please refer to the instructions under each subdirectory to build the projects.
+We recommend creating a new Anaconda environment for each Python-based project and downloading all the requirements with conda. Additionally, some projects provide a Docker file to build a container for executing the programs. Please refer to the instructions under each subdirectory to build the projects.
+
 ## 1. Preprocessing
 ### Datasets
-We perform an extensive experiment over a wide range of datasets including real graphs of different scale. We also try to train and test RL4IM, Geometric-QN on synthetic graphs, these synthetic datasets are generated through scripts and stored in their subdirectories.
+We performed extensive experiments on a wide range of datasets, including real graphs of different scales. We also trained and tested RL4IM and Geometric-QN on synthetic graphs, which were generated through scripts under their respective subdirectories.
 
-Download all real-world datasets and then process them into the edges files with the script. 
+Download all real-world datasets and then process them into edge files using the provided script.
 
 #### Real datasets
 ```
 bash download_datasets.sh
 ```
-#### synthetic datasets.
+#### synthetic datasets
 Follow instructions in README under RL4IM and Geometric-QN to generate synthetic datasets.
 
 ### Preprocess for specific Task
