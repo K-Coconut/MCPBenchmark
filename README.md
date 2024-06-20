@@ -1,7 +1,7 @@
-# Benchmark Study for MCP
-## **Our FUll-VERSION paper can be found at** [HERE](full_version_MCPBenchmarks.pdf)
+# A Benchmark Study of Deep-RL Methods for Maximum Coverage over Graphs
+Zhicheng Liang, Yu Yang, Xiangyu Ke, Xiaokui Xiao, Yunjun Gao
 
-Implementation for the following paper: "A Benchmark Study of Deep-RL Methods for Maximum Coverage over Graphs"
+## **Our FUll-VERSION paper can be found at** [HERE](full_version_MCPBenchmarks.pdf)
 
 The table below lists the methods we include in the benchmark study.
 
