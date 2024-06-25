@@ -1,7 +1,7 @@
 # A Benchmark Study of Deep-RL Methods for Maximum Coverage over Graphs
 Zhicheng Liang, Yu Yang, Xiangyu Ke, Xiaokui Xiao, Yunjun Gao
 
-## **Our FUll-VERSION paper can be found at** [HERE](full_version_MCPBenchmarks.pdf)
+## **Our FUll-VERSION paper can be found at** [HERE](http://arxiv.org/abs/2406.14697)
 
 The table below lists the methods we include in the benchmark study.
 
