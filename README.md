@@ -68,3 +68,13 @@ python preprocess.py -d BrightKite -m WC
 * Follow instructions in each project to train models and test.
 * Calculate the influence spread with the tool IMEvaluation in IM problem.
 
+# Cite
+```
+@article{liang2024benchmark,
+  title={A Benchmark Study of Deep-RL Methods for Maximum Coverage Problems over Graphs},
+  author={Liang, Zhicheng and Yang, Yu and Ke, Xiangyu and Xiao, Xiaokui and Gao, Yunjun},
+  journal={arXiv preprint arXiv:2406.14697},
+  year={2024}
+}
+```
+
