@@ -72,11 +72,21 @@ python preprocess.py -d BrightKite -m WC
 
 # Cite
 ```
-@article{liang2024benchmark,
-  title={A Benchmark Study of Deep-RL Methods for Maximum Coverage Problems over Graphs},
-  author={Liang, Zhicheng and Yang, Yu and Ke, Xiangyu and Xiao, Xiaokui and Gao, Yunjun},
-  journal={arXiv preprint arXiv:2406.14697},
-  year={2024}
+@article{10.14778/3681954.3682029,
+author = {Liang, Zhicheng and Yang, Yu and Ke, Xiangyu and Xiao, Xiaokui and Gao, Yunjun},
+title = {A Benchmark Study of Deep-RL Methods for Maximum Coverage Problems over Graphs},
+year = {2024},
+issue_date = {July 2024},
+publisher = {VLDB Endowment},
+volume = {17},
+number = {11},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3681954.3682029},
+doi = {10.14778/3681954.3682029},
+journal = {Proc. VLDB Endow.},
+month = aug,
+pages = {3666–3679},
+numpages = {14}
 }
 ```
 
